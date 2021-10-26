@@ -1,0 +1,17 @@
+#domainPricing
+    {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #domainPricing div
+    {
+        font-size: 1rem;
+    }
+
+    #featureList
+    {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+

@@ -1,0 +1,995 @@
+:root
+{
+    --primaryColor: #081c15;
+    --secondaryColor: #1B4332;
+    --darkColor: #2D6A4F;
+    --mediumColor1: #40916C;
+    --mediumColor2: #52B788;
+    --mediumColor3: #74C69D;
+    --lightColor1: #95D5B2;
+    --lightColor2: #B7E4C7;
+    --lightColor3: #D8F3DC;
+    --paraColor: #abb2b9;
+    --linearGradient1: -webkit-linear-gradient( var(--lightColor2), var(--lightColor3), var(--lightColor1));
+    --linearGradient2: -webkit-linear-gradient(to right,  #40916C, #A1FFCE,#52B788);
+}
+body
+{
+    margin: 0rem;
+    padding: 0rem;
+    background-color: var(--primaryColor);
+    font-family: "Open Sans",sans-serif;
+    font-size: 1rem;
+    color: white;
+    height: auto;
+    background: linear-gradient(15deg, white 58%, var(--primaryColor) 25%)
+}
+
+/* .fas {
+    font-size: 4rem;
+    display: block;
+    background: -webkit-linear-gradient( var(--lightColor2), var(--lightColor3), var(--lightColor1), var(--lightColor2), var(--lightColor3), var(--lightColor1), var(--lightColor2), var(--lightColor3), var(--lightColor1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  } */
+
+
+/* --------------Styling container-------------- */
+
+.container
+{
+    max-width: 90%;
+    margin: 0rem auto;
+}
+
+/* ----------------Styling heading--------------- */
+
+#heading
+{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#heading i
+{
+    font-size: 2rem;
+    background: var(--linearGradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1rem;
+    
+}
+
+#heading h1
+{
+    font-size: 1.6rem;
+}
+
+
+/* ------------Styling nav------------------- */
+
+nav
+{
+    position: sticky;
+    top: 0rem;
+    background-color: #404040;
+    padding: 0.7rem 1.5rem;
+    overflow: hidden; /* set overflow to hidden to keep it child element within itself */
+    height: auto;
+}
+
+nav #menuButton
+{
+    padding: 0.5rem 1rem;
+    display: inline;
+    float: right;
+    background-color: #181818;
+    border-radius: 0.2rem;
+}
+
+nav .navList
+{
+    display: none;
+}
+
+nav ul.show
+{
+    display: block;
+}
+
+/* -------------Styling nav list----------------- */
+.navList
+{
+    padding: 0rem;
+    margin: 0rem;
+    margin-top: 3rem;
+}
+.navList li a
+{
+    text-decoration: none;
+    color: white;
+}
+
+.navList li 
+{
+    margin-bottom: 0.7rem;
+    list-style: none;
+}
+
+.btn
+{
+    background: #A1FFCE;  /* fallback for old browsers */
+    background: var(--linearGradient2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom,  #40916C, #A1FFCE,#52B788); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    padding: 0.5rem 1.2rem;
+    color: var(--secondaryColor);
+    width: 40%;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 1rem;
+}
+
+
+/* ------------------Styling the hero section---------------------- */
+#heroImage
+{
+    display: none;
+}
+#hero
+{
+    margin-top: 3rem;
+}
+
+#hero p
+{
+    color: var(--lightColor3);
+    margin-top: 2rem;
+}
+#hero p:nth-child(1)
+{
+    margin: 0rem;
+    color: var(--lightColor1);
+}
+
+#hero h1
+{
+    font-size: 1.9rem;
+}
+
+#hero button
+{
+    width: auto;
+    padding: 1.2rem 2.5rem;
+    border-radius: 5rem;
+    margin-top: 2rem;
+}
+
+
+/* ------------Styling domain section------------------ */
+
+#domainSection
+{
+    margin-top: 6rem;
+}
+
+#domainSection h2 
+{
+    font-size: 1.6rem;
+    word-spacing: 0.3rem;
+}
+
+#domainSection p
+{
+    color:var(--lightColor3);
+}
+
+.input-form input
+{
+    position: relative;
+    z-index: -3;
+    width: 100%;
+    border-radius: 5rem;
+    padding: 1rem 0rem;
+    border: none;
+}
+
+.input-form input::placeholder
+{
+    text-align: center;
+}
+
+.search-form
+{
+    top: -2.5rem;
+    left: -1rem;
+    position: relative;
+    float: right;
+    z-index: -1;
+}
+.search-form button
+{
+    border-radius: 100rem;
+    background: var(--linearGradient1);
+    width: 2rem;
+    height: 2rem;
+    border: none;
+}
+.world-form i
+{
+    color: gray;
+}
+
+.search-form i
+{
+    color: var(--primaryColor);
+}
+.world-form
+{
+    top: -2rem;
+    left: 1rem;
+    position: relative;
+    z-index: -1;
+}
+
+
+#domainPricing
+{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    margin-top: 4rem;
+    font-size: 1.2rem;
+    grid-column-gap: 1rem ;
+    float: right;
+}
+
+#domainPricing div
+{
+    margin-bottom: 0.5rem;
+    border-right: 0.1rem solid var(--lightColor1);
+}
+
+#domainPricing div:nth-child(1) span
+{
+    color: tomato;
+}
+
+#domainPricing div:nth-child(2) span
+{
+    color: orange;
+}
+
+#domainPricing div:nth-child(3) span
+{
+    color: violet;
+}
+
+#domainPricing div:nth-child(4) span
+{
+    color: rgb(230, 230, 17);
+}
+
+/* -----------------styling features section ------------------ */
+
+#features
+{
+    margin-top: 16rem; 
+}
+
+#features h1
+{
+    font-size: 1.5rem;
+}
+
+#features p
+{
+    color: var(--lightColor3);
+}
+
+#features .featureDiv i
+{
+    font-size: 3rem;
+    background: var(--linearGradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#features .featureDiv
+{
+    margin-top: 3rem;
+}
+
+#featureList
+{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* ---------------Styling plan section ----------------- */
+#pricingHeading p
+{
+    color: var(--lightColor3);
+}
+#pricing
+{
+    margin-top: 6rem;
+}
+
+
+#pricingGrid
+{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.pricingcard
+{
+    background-color: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.pricingcard .upperPricingSection
+{
+    line-height: 1.5rem;
+}
+
+.pricingcard .lowerPricingSection
+{
+    line-height: 2.5rem;
+}
+.pricingcard i
+{
+    text-align: center;
+    font-size: 6rem;
+    display: block;
+    padding: 0rem;
+    margin: 0rem;
+    margin-bottom: 3rem;
+    background: -webkit-linear-gradient( var(--lightColor2), var(--lightColor3), var(--lightColor1), var(--lightColor2), var(--lightColor3), var(--lightColor1), var(--lightColor2), var(--lightColor3), var(--lightColor1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pricingcard h1
+{
+    color: var(--secondaryColor);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pricingcard p
+{
+    text-align: center;
+}
+
+.pricingcard p span
+{
+    color: var(--secondaryColor);
+    font-size: 2rem;
+}
+
+.pricingcard .upperPricingSection p
+{
+    font-size: 0.8rem;
+    color: grey;
+}
+
+.pricingcard .lowerPricingSection p
+{
+    color: gray;
+}
+
+.priceButton
+{
+  border-radius: 100rem;
+  font-family: 'Avenir Next';
+  width: auto;
+  margin: 0rem auto;
+  font-size: 1rem;
+  padding: .5rem 2rem;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg,  #40916C, #A1FFCE,#52B788);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+
+}
+
+.lowerPricingSection button span
+{
+    background: -webkit-linear-gradient( #52B788, #A1FFCE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ----------------Styling trait section----------------- */
+
+#trait
+{
+    margin-top: 6rem;
+}
+
+#trait-1 img
+{
+    width: 20rem;
+}
+
+.traitSection h1
+{
+    font-size: 1.6rem;
+    color: var(--secondaryColor);
+}
+
+.traitSection p
+{
+    margin-top: 2rem;
+    color: rgb(158, 158, 158);
+}
+
+.traitSection ul
+{
+    list-style: none;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+.traitSection ul li
+{
+    margin-bottom: 0.5rem;
+}
+
+.traitSection ul li::before
+{
+    content: "\f3cd";
+    font-size: 1rem;
+    margin-right: 0.2rem;
+}
+
+#trait-2
+{
+    margin-top: 6rem;
+}
+
+#trait-2 img
+{
+    width: 20rem;
+}
+
+#trait-2 button
+{
+    width: auto;
+    margin: 2rem 0rem;
+    padding: 1.5rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+}
+
+#trait-2 button i
+{
+    margin-right: 0.5rem;
+}
+
+/* ----------------Styling FAQ section------------------- */
+
+#faq
+{
+    padding-top: 16rem;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+    background: linear-gradient(-15deg, var(--primaryColor) 80%, white 2%);
+}
+
+#faq h1
+{
+    font-size: 1.4rem;
+}
+
+#faq p
+{
+    color: gray;
+}
+
+#faq ul
+{
+    margin-top: 2rem;
+    list-style: none;
+}
+
+#faq ul h3
+{
+    font-size: 1rem;
+}
+
+#faq ul li
+{
+    list-style-type: "Q . ";
+    margin-right: 0.2rem;
+    margin-top: 2rem;
+}
+
+#faq button
+{
+    margin-top: 3rem;
+    width: auto;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+
+/* -------------Styling testimonial here------------------ */
+
+#testimonial
+{
+    margin: 0rem; 
+    padding: 0rem;
+    background-color: var(--primaryColor);
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+}
+#testimonial img
+{
+    margin: 0rem; 
+    padding: 0rem;
+    width: 21rem;
+
+}
+
+/* ------------------Styling footer------------------------ */
+
+#footer
+{
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    background-color: var(--secondaryColor);
+}
+
+#footerIcon
+{
+    display: flex;
+    align-items: center;
+}
+
+#footerIcon i
+{
+    font-size: 2rem;
+    background: var(--linearGradient1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-right: 1rem;
+    
+}
+
+#footerIcon h1
+{
+    font-size: 1.6rem;
+}
+
+#footerComponents-1 button
+{
+    margin-bottom: 1rem;
+    width: 50%;
+}
+#footerComponents-1 button.priceButton
+{
+    color: white;
+    box-shadow: 2px 1000px 1px var(--secondaryColor) inset;
+}
+
+#footerComponents-1 p
+{
+    margin-bottom: 2.5rem;
+    color: var(--paraColor);
+}
+
+#socialMediaIcon
+{
+    margin-top: 2rem;
+}
+
+#socialMediaIcon div
+{
+    display: inline;
+}
+#socialMediaIcon .fab
+{
+    padding: 0.8rem;
+    border: 0.1rem solid white;
+    font-size: 0.8rem;
+    border-radius: 100rem;
+}
+
+.footerComponents 
+{
+    margin-top: 3rem;
+}
+.footerComponents h4
+{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.footerComponents ul
+{
+    margin: 0rem;
+    padding: 0rem;
+}
+.footerComponents ul li 
+{
+    list-style: none;
+    color: var(--paraColor);
+    margin-bottom: 0.5rem;
+}
+
+/* ------------Styling copyright para------------------ */
+
+.copyright
+{
+    margin: 0rem;
+    padding: 4rem;
+    font-size: 0.9rem;
+    color: var(--paraColor);
+    background-color: var(--secondaryColor);
+    text-align: center ;
+}
+
+.copyright span
+{
+    font-size: 1rem;
+    color: white;
+}
+
+/* ------Other css------------- */
+
+#pricingcard-2, #pricingcard-3
+{
+    box-shadow: 0rem 0rem 0.1rem 0.1rem #888888;
+}
+
+/* -----Meida Query------------ */
+
+@media(min-width: 590px)
+{
+    #domainPricing
+    {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #domainPricing div
+    {
+        font-size: 1rem;
+    }
+
+    #featureList
+    {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    #pricingHeading
+    {
+        text-align: center;
+    }
+
+    .traitSection img 
+    {
+        display: block;
+        width: 100%;
+        margin: 0rem auto;
+    }
+
+    #testimonial img 
+    {
+        display: block;
+        width:70%;
+        margin: 0rem auto;
+    }
+
+    #footer
+    {
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    #footerComponents-1 button 
+    {
+        width: 80%;
+    }
+    .footerComponents h4
+    {
+        margin-top: 0rem;
+    }
+
+    #trait-2
+    {
+        margin-top: 0rem;
+    }
+
+}
+
+@media(min-width: 790px)
+{
+    #features h1
+    {
+        text-align: center;
+        font-size: 2rem;
+    }
+    #featureList
+    {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    #pricingGrid
+    {
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    #faq h1 
+    {
+        text-align: center;
+    }
+
+    #faq ul 
+    {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-column-gap: 5rem;
+    }
+
+    #testimonial img 
+    {
+        display: block;
+        width:60%;
+        margin: 0rem auto;
+    }
+
+    #footer
+    {
+        grid-column-gap: 10rem;
+    }
+}
+
+@media(min-width: 998px)
+{
+    header
+    {
+        display: inline;
+    }
+
+    nav 
+    {
+        margin: 0rem;
+        padding: 0rem;           
+    } 
+
+    .navList
+    {
+        margin: 0rem;
+    }
+
+    #navBar
+    {
+        position: absolute;
+        float: right;
+        left: 18rem;
+        padding: 0rem;
+        margin-top: 1rem;
+        background-color: inherit;
+    }
+    nav .navList
+    {
+        display: grid;
+        grid-auto-flow: column ;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navList li 
+    {
+        margin-right: 2rem;
+        padding: 0rem;
+        width: auto;
+    } 
+
+    .btn
+    {
+        /* background: #A1FFCE;  
+        background: var(--linearGradient2);
+        background: linear-gradient(to bottom,  #40916C, #A1FFCE,#52B788);
+        border: none;
+        padding: 0.5rem 1.2rem;
+        color: var(--secondaryColor);  */
+        width: auto;
+        /* font-size: 1.1rem;
+        font-weight: 500;
+        border-radius: 1rem; */
+    }
+
+    nav
+    {
+        /* position: sticky;
+        top: 0rem;
+        padding: 0.7rem 1.5rem; */
+        /*overflow: hidden; /* set overflow to hidden to keep it child element within itself */
+        height: auto;
+    }
+
+    nav #menuButton
+    {
+        padding: 0.5rem 1rem;
+        display: none;
+        float: right;
+        background-color: #181818;
+        border-radius: 0.2rem;
+    }
+
+    #hero 
+    {
+        margin-top: 7rem;
+    }
+    #heroImage
+    {
+        margin: 0rem;
+        padding: 0rem;
+        display: block;
+    }
+
+    #heroImage img 
+    {
+        width: 30rem;
+    }
+
+    #heroContent
+    {
+        display: grid;
+        grid-auto-flow: column;
+    }
+
+    #domainSection
+    {
+        display: grid;
+        grid-auto-flow: column;
+        grid-column-gap: 2rem;
+    }
+
+    #searchSecond
+    {
+        margin-top: 2rem;
+    }
+
+    #domainPricing
+    {
+        margin-top: 1rem;
+    }
+
+
+    .search-box .input-form input
+    {
+        padding: 1.5rem;
+    }
+
+    .search-box .input-form input::placeholder
+    {
+        font-size: 1.2rem;
+    }
+
+    .search-form 
+    {
+        top: -3.5rem;
+        left: 1rem;
+    }
+
+    .world-form 
+    {
+        top: -3rem;
+    }
+    .world-form i 
+    {
+        font-size: 2rem;
+    }
+    .search-form button 
+    {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .search-form i 
+    {
+        font-size: 1.5rem;
+    }
+    #pricingGrid
+    {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    body 
+    {
+        background: linear-gradient(15deg, white 63%, var(--primaryColor) 25%);
+        font-size: 1.1rem;
+    }
+    
+    .traitSection 
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #trait-1 div img 
+    {
+        width: 23rem;
+    }
+    .traitSection ul li 
+    {
+        color: var(--paraColor);
+    }
+    #trait-2 
+    {
+        margin-top: 6rem;
+    }
+
+    #faq 
+    {
+        background: linear-gradient(-10deg, var(--primaryColor) 80%, white 2%);
+    }
+    #faq h1
+    {
+        text-align: center;
+    }
+
+    #faqPara 
+    {
+        width: 60%;
+        margin: auto;
+    }
+
+    #faqButton 
+    {
+        display: flex;
+        justify-content: center;
+    }
+
+    #testimonial img 
+    {
+        width: 60%;
+        height: 30rem;
+    }
+
+    #footer
+    {
+        grid-template-columns: 38% 20% 20% 20%;
+        grid-column-gap: 1rem;
+    }
+
+    #footerComponents-1 p 
+    {
+        width: 80%;
+    }
+
+    #navSticky 
+    {
+        position: sticky;
+        top: 0rem;
+    }
+
+
+
+    #navSticky::before 
+    {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: var(--secondaryColor);
+    }
+}
